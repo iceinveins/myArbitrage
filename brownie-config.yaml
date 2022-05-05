@@ -1,0 +1,23 @@
+dotenv: .env
+dependencies:
+  - "Uniswap/v3-core@1.0.0"
+  - "Uniswap/v3-periphery@1.0.0"
+  - "Uniswap/v2-periphery@1.0.0-beta.0"
+  - "OpenZeppelin/openzeppelin-contracts@4.6.0"
+compiler:
+  solc:
+    remappings:
+      - "@uniswap/v3-core=Uniswap/v3-core@1.0.0"
+      - "@uniswap/v3-periphery=Uniswap/v3-periphery@1.0.0"
+      - "@uniswap/v2-periphery=Uniswap/v2-periphery@1.0.0-beta.0"
+      - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.6.0"
+networks:
+  default: mainnet-fork
+  mainnet-fork:
+    uniswap_router: "0xE592427A0AEce92De3Edee1F18E0157C05861564"
+    uniswap_factory: "0x1F98431c8aD98523631AE4a59f267346ea31F984"
+    sushiswap_router: "0xd9e1cE17f2641f24aE83637ab66a2cca9C378B9F"
+    weth_token: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+    dai_token: "0x6b175474e89094c44da98b954eedeac495271d0f"
+wallets:
+  from_key: ${PRIVATE_KEY}
